@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.calculator {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    height: 625px;
+    border: 1px solid #757575;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 2px #00000030; /* offset-x | offset-y | blur-radius | spread-radius | color */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.screen {
+    background-color: #f4fdfb;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 12px 22px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* WHITE-DARK MODE ----------------------------------------- */
+.white-dark-mode-container {
+    background-color: #6aa498;
+    height: 22px;
+    width: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1px;
+}
+
+.white-dark-mode-button {
+    background-color: #f4fdfb;
+    height: 20px;
+    width: 20px;
+    border-radius: 30px;
+}
+
+/* OPERATION & RESULT -------------------------------------- */
+.operation {
+    color: #616161;
+    font-size: 18px;
+    margin: 20px 6px 0px 0px;
+}
+
+.result {
+    font-size: 80px;
+    max-width: 380px;
+}
+
+/* KEYBOARD ----------------------------------------------- */
+.keyborard {
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 22px;
+    padding: 20px 26px;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a7c8c1; 
+    background-color: #f4fdfb;
+    border-radius: 50%;
+    font-size: 36px; 
+    cursor: pointer;
+}
+
+#equal-key {
+    grid-column: 3/5;
+    border-radius: 26px;
+    background-color: #6aa498;
+    color: white;
+}
+
+.sign-key, 
+#plus-minus-key {
+    color: #65b3a4;
+}
+
+#point-key {
+    color: black;
+}
+
+/* DARK MODE ------------------------------------------------------------- */
+body.dark .white-dark-mode-container {
+    background-color: #ffffff;
+}
+
+body.dark .white-dark-mode-button {
+    background-color: #537f75;
+}
+
+body.dark .calculator { 
+    background-color: #2a413c;
+}
+
+body.dark .screen {
+    background-color: #263b36;
+}
+
+body.dark .operation {
+    color: #d4d4d4;
+}
+
+body.dark .result {
+    color: #ffffff;
+}
+
+body.dark .key {
+    border: 1px solid #4c6762; 
+    background-color: #263b36;
+    color: #ffffff;
+}
+
+body.dark #equal-key {
+    background-color: #537f75;
+}
+
+body.dark .sign-key, 
+body.dark #plus-minus-key {
+    color: #76d0be;
+}
+
+body.dark #point-key {
+    color: white;
+}
